@@ -6,8 +6,8 @@ pa=["P2 = "," 0"]
 pb=["P1 = "," 0"]
 spm= ""
 ende=""
-def spilfeld():
-  print(l[6] + "I" + l[7] + "I" + l[8] + "\n" + "-----\n" + l[3] + "I" + l[4] + "I" + l[5] + "\n" + "-----\n" + l[0] + "I" + l[1] + "I" + l[2])
+def sf():
+  print(l[6] + "I" + l[7] + "I" + l[8] + "\n" + "-----\n" + l[3] + "I" + l[4] + "I" + l[5] + "\n" + "-----\n" + l[0] + "I" + l[1] + "I" + l[2]+"\n")
 def bot():
  i=1
  while i< len(bl):
@@ -39,7 +39,7 @@ def mg(pl):
    a=pa[0]
    pl=0
    b="X"
-   spilfeld()
+   sf()
    inpu=input(a + " = ")
   elif spm == "1":
    bot()
@@ -48,7 +48,7 @@ def mg(pl):
    a=pb[0]
    pl=1
    b="0"
-   spilfeld()
+   sf()
    inpu=input(a + " = ")
   try:
    if inpu!="" and l[int(inpu) - 1]== " ":
@@ -64,14 +64,14 @@ def mg(pl):
     ende=a+"!"+" won!"
     break
   if l[0]!= " " and l[1] != " " and l[2]!= " " and l[3] != " " and l[4] != " " and l[5] != " " and l[6] != " " and l[7] != " " and l[8] != " ":
-   ende="Unendschieden! "
+   ende="Unentschieden! "
    break
 while spm != "1" :
- spm=input("\n\n\n\n\n(1)1player-(2)2player\n")
+ spm=input("\n\n\n\n\n(1) Singelplayer - (2) 2 player\n")
  if(spm == "1"):
   pb[0]="bot"
  elif(spm == "2"):
-  pb=input(pb[0])+"!0"
+  pb[0]=input(pb[0])
   break
 pa[0]=input(pa[0])
 mg(randrange(0, 1))
