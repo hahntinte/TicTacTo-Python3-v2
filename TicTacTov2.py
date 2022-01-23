@@ -27,7 +27,6 @@ def bot():
     break
   i+=1
  if i==len(bl):
-  print("random")
   i = randrange(0, 8, 1)
   while l[i]!= " ":
    i = randrange(0, 8, 1)
@@ -68,7 +67,7 @@ def mg(pl):
    ende="Unendschieden! "
    break
 while spm != "1" :
- spm=input("\n\n\n\n\n(1) Singelplayer - (2) 2 player\n")
+ spm=input("\n\n\n\n\n(1)1player-(2)2player\n")
  if(spm == "1"):
   pb[0]="bot"
  elif(spm == "2"):
